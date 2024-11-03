@@ -1,7 +1,7 @@
 package com.project.hcmuswebserver.controllers;
 
 import com.project.hcmuswebserver.dtos.RegisterDto;
-import com.project.hcmuswebserver.responses.SuccessResponse;
+import com.project.hcmuswebserver.models.SuccessResponse;
 import com.project.hcmuswebserver.services.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

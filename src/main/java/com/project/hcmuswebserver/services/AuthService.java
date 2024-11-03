@@ -4,6 +4,7 @@ import com.project.hcmuswebserver.dtos.RegisterDto;
 import com.project.hcmuswebserver.entities.User;
 import com.project.hcmuswebserver.repositories.UserRepository;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -13,6 +14,7 @@ public class AuthService {
 
     private final UserRepository _userRepository;
 
+    @Autowired
     public AuthService(UserRepository userRepository) {
         this._userRepository = userRepository;
     }

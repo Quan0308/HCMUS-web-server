@@ -1,14 +1,15 @@
 package com.project.hcmuswebserver.entities;
 
-import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 
 @Document(collection = "users")
+@NoArgsConstructor
 public class User {
     @Id
     private String id;
@@ -16,15 +17,13 @@ public class User {
     private String password;
 
     @CreatedDate
-    private OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @LastModifiedDate
-    private OffsetDateTime updatedAt;
+    private LocalDateTime updatedAt;
 
     public User(String email, String password) {
         this.email = email;
         this.password = password;
     }
-
-    public User() {}
 }

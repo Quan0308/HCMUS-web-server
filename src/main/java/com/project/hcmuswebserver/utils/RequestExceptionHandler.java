@@ -1,5 +1,6 @@
-package com.project.hcmuswebserver.exceptions;
+package com.project.hcmuswebserver.utils;
 
+import com.project.hcmuswebserver.models.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;

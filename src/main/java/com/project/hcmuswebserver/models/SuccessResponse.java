@@ -1,4 +1,4 @@
-package com.project.hcmuswebserver.responses;
+package com.project.hcmuswebserver.models;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;

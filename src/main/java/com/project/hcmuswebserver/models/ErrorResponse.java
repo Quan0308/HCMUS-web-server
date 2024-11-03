@@ -1,4 +1,4 @@
-package com.project.hcmuswebserver.exceptions;
+package com.project.hcmuswebserver.models;
 
 import org.springframework.http.HttpStatusCode;
 
