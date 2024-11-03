@@ -36,7 +36,6 @@ public class RequestExceptionHandler {
         String message = "An internal server error occurred";
 
         if (ex instanceof ResponseStatusException) {
-            System.out.println("Response status exception" + ex);
             ResponseStatusException responseStatusException = (ResponseStatusException) ex;
             status = responseStatusException.getStatusCode();
             message = responseStatusException.getReason();
