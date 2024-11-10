@@ -12,16 +12,15 @@ import org.springframework.web.server.ResponseStatusException;
 
 @ControllerAdvice
 public class RequestExceptionHandler {
+    public String getFirstValidationMessage(MethodArgumentNotValidException ex) {
+        return ex.getBindingResult().getFieldErrors().get(0).getDefaultMessage();
+    }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
         String error = getFirstValidationMessage(ex);
         ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, error);
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-    }
-
-    public String getFirstValidationMessage(MethodArgumentNotValidException ex) {
-        return ex.getBindingResult().getFieldErrors().get(0).getDefaultMessage();
     }
 
 
